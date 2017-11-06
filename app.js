@@ -2,11 +2,6 @@ var express = require("express");
 
 var app = express();
 
-/*
-app.get("/", function(req, res){
-	res.send("<html><body><h1>This is the first assignment to be deployed on heroku</h1></body></html>");
-});
-*/
 app.get('/',function(request,response){
 	response.sendFile(__dirname+'/index.html');
   });
