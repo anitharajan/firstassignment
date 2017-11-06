@@ -17,8 +17,8 @@ app.get("/download", function(req, res){
 	});
 });
 
-var port =  4200;
+app.set( 'port', ( process.env.PORT || 4200 ));
 
-app.listen(port, function(){
-	console.log("Server is ON at " + 4200);
-});
+app.listen( app.get( 'port' ), function() {
+  console.log( 'Node server is running on port ' + app.get( 'port' ));
+  });
